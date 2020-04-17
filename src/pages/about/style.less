@@ -1,0 +1,120 @@
+.banner{
+  width: 100%;
+  height: calc(100vw/(1920/429));
+  background-image: url('../../assets/about_banner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flexBox{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.content{
+  padding: 5rem /* 80/16 */ 0 3.125rem /* 50/16 */ /* 53/16 */ 0;
+}
+
+.title{
+  // font-family: 'SourceHanSansCN-Blod';
+  font-size: 3.4375rem /* 55/16 */;
+  color: #f36609;
+  margin-bottom: 2.1875rem /* 35/16 */;
+  line-height: 1;
+}
+
+.companyTitle{
+  color: #f36609;
+  margin: 3.75rem 0  1.625rem 0;
+  font-size: 3rem /* 48/16 */;
+}
+
+.companyTag{
+  font-size: 1.875rem /* 30/16 */;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f36609;
+  line-height: 2;
+  border-radius: 15px;
+  padding: 0 1.875rem /* 30/16 */;
+}
+
+.tagText{
+  font-size: 1.3125rem /* 21/16 */;
+  padding-left: 1.875rem /* 30/16 */;
+  margin: 20px 0 25px 0;
+  font-weight: 100;
+  line-height: 1.34;
+}
+
+.text{
+  color: #221815;
+  font-size: 1.375rem /* 22/16 */;
+  margin-bottom: 2.5rem /* 40/16 */;
+  font-weight: 100;
+}
+
+.imgBox{
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgBox2{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.boxItem{
+  flex-grow: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.companyImg1:extend(.boxItem){
+  background-image: url(../../assets/company1.jpg);
+  height: 22.375rem /* 358/16 */;
+  background-position: left;
+}
+
+.companyImg2:extend(.boxItem){
+  background-image: url(../../assets/company2.jpg);
+  height: 22.375rem /* 358/16 */;
+  background-position: right;
+}
+
+.companyImg3:extend(.boxItem){
+  background-image: url(../../assets/company3.jpg);
+  height: 16.25rem /* 260/16 */;
+  background-position: right;
+  margin-bottom: 2.5rem /* 40/16 */
+}
+
+.companyImg4:extend(.boxItem){
+  background-image: url(../../assets/company4.jpg);
+  height: 16.25rem /* 260/16 */;
+  background-position: right;
+  margin-bottom: 2.5rem /* 40/16 */
+}
+
+.companyImg5:extend(.boxItem){
+  background-image: url(../../assets/company5.png);
+  height: 13.8125rem /* 221/16 */;
+  background-position: center;
+  margin: 5px 0;
+}
+
+.companyImg6:extend(.boxItem){
+  background-image: url(../../assets/company6.jpg);
+  height: 13.8125rem /* 221/16 */;
+  background-position: right;
+}
+
+.companyImg7:extend(.boxItem){
+  background-image: url(../../assets/company7.jpg);
+  height: 13.8125rem /* 221/16 */;
+  background-position: center;
+  margin: 5px 0;
+}

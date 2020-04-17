@@ -1,0 +1,97 @@
+.banner{
+  width: 100%;
+  height: calc(100vw/(1920/981));
+  background-image: url('../assets/banner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.content{
+  padding: 7.5rem /* 120/16 */ 0 6.25rem /* 100/16 */ 0;
+}
+.flexBox{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.title1{
+  // font-family: 'SourceHanSansCN-Light';
+  font-size: 3.13375rem /* 50.14/16 */;
+  color: #f36609;
+  margin-bottom: .9375rem /* 15/16 */;
+  line-height: 1.3;
+  font-weight: 200;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.title2{
+  // font-family: 'SourceHanSansCN-Blod';
+  font-size: 2.506875rem /* 40.11/16 */;
+  color: #f36609;
+  margin-bottom: 2.5rem /* 40/16 */;
+  line-height: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.logBox{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.flexItem(@n, @i: 1) when (@i =< @n) {
+  .flexItem_@{i} {
+    height: 153px;
+    width: 179px;
+    /* border-radius: 5px; */
+    /* border: 1px solid #666; */
+    background-image: url("../assets/log_@{i}.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 0 0 25%;
+    margin-bottom: 1.875rem /* 30/16 */
+  }
+  .flexItem(@n, (@i + 1));
+}
+
+.flexItem(8);
+
+.logItem{
+  text-align: center;
+  margin-bottom: 1.875rem /* 30/16 */
+}
+
+
+.nutrition{
+  width: 100%;
+  height: calc(100vw/(1920/739));
+  background-image: url('../assets/nutrition.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px){
+  .logBox{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px){
+  
+  .logBox{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px){
+  
+  .logBox{
+    width: 60%;
+    margin: 0 auto;
+  }
+}
