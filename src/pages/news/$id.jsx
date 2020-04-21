@@ -24,7 +24,8 @@ export default (props) => {
         }
       }
     )()
-  }, [props.match.params]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>

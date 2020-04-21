@@ -1,6 +1,5 @@
 import request from 'umi-request';
-
-const baseUrl = 'http://go-charr-drupal.c60795b656a25414792b17fae115d4da1.cn-hangzhou.alicontainer.com/jsonapi'
+import {baseUrl} from '../config/config';
 
 export function getNewsList() {
   return request(`${baseUrl}/node/article?include=field_image`, {

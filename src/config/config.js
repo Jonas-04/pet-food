@@ -1,0 +1,2 @@
+export const baseUrl = 'http://go-charr-drupal.c60795b656a25414792b17fae115d4da1.cn-hangzhou.alicontainer.com/jsonapi';
+export const imageBaseUrl = 'http://go-charr-drupal.c60795b656a25414792b17fae115d4da1.cn-hangzhou.alicontainer.com';

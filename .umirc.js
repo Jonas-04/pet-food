@@ -3,13 +3,13 @@
 export default {
   treeShaking: true,
   ssr: true,
-  proxy: {
-    '/api': {
-      'target': 'http://go-charr-drupal.c60795b656a25414792b17fae115d4da1.cn-hangzhou.alicontainer.com/jsonapi/',
-      'changeOrigin': true,
-      'pathRewrite': { '^/api' : '' },
-    },
-  },
+  // proxy: {
+  //   '/api': {
+  //     'target': 'http://go-charr-drupal.c60795b656a25414792b17fae115d4da1.cn-hangzhou.alicontainer.com/jsonapi/',
+  //     'changeOrigin': true,
+  //     'pathRewrite': { '^/api' : '' },
+  //   },
+  // },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
