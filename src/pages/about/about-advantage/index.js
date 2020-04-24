@@ -1,12 +1,14 @@
-import styles from './style.less'
-import { Container,Row,Col } from "react-bootstrap"
-import Permits from '../../assets/permits.png';
-import Supply from '../../assets/supply.png';
-import Quality from '../../assets/quality.png';
+/* 高雀优势 */
+import styles from './style.less';
+import { Container, Row, Col } from 'react-bootstrap';
+import Permits from '../../../assets/permits.png';
+import Supply from '../../../assets/supply.png';
+import Quality from '../../../assets/quality.png';
+
 export default () => (
   <div>
     <div className="common-banner"></div>
-    <div className={styles.content}>
+    <div className={styles.content}></div>
     <Container>
       <Row>
         <Col sm={12}>
@@ -135,6 +137,5 @@ export default () => (
         </Col>
       </Row>
     </Container>
-    </div>
   </div>
-)
+);

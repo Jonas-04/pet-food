@@ -150,8 +150,52 @@ body {
   bottom: -4px;
 }
 
-.header .nav .item-active.nav-item .nav-link {
+/* .header .nav .item-active.nav-item {
   color: #f36609;
+} */
+
+.header .about {
+  position: relative;
+}
+
+.header .about:hover .aboutSelect{
+  display: block;
+
+}
+
+.aboutSelect {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #f36609;
+  margin: 0 -2rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+.aboutSelect ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutSelect ul li {
+  margin: 1rem 0;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  padding: .2rem 0;
+}
+
+.aboutSelect ul li:hover {
+  background-color: #ac2424;
+}
+
+.aboutSelect ul li a {
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .header-logo {
