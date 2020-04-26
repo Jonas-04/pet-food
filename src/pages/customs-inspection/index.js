@@ -1,5 +1,14 @@
 import styles from './style.less';
-import { Container, Row, Col, InputGroup, FormControl, Button, Carousel } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  InputGroup,
+  FormControl,
+  Button,
+  Carousel,
+  Pagination,
+} from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { Search } from 'react-bootstrap-icons';
 import { imageBaseUrl } from '@/config/config';
@@ -21,11 +30,10 @@ export default () => {
 
   // let productId = '';
 
-
   const [lotNumberList, setLotNumberList] = useState([]);
   const [lotNumberDatas, setLotNumberDatas] = useState([]);
   const [inspectionImage, setInspectionImage] = useState({});
-  const [productId, setProductId] = useState("");
+  const [productId, setProductId] = useState('');
   const [lotNumberAllDatas, setLotNumberAllDatas] = useState({});
 
   const [show, setShow] = useState(true);
@@ -76,7 +84,7 @@ export default () => {
       setProduct(newsList);
       setLotNumberDatas(data);
       setLotNumberList(data.find(a => a.id === newsList[0].productList[0].projectId));
-      setProductId(newsList[0].productList[0].projectId)
+      setProductId(newsList[0].productList[0].projectId);
       setLotNumberAllDatas(data.find(a => a.id === newsList[0].productList[0].projectId));
     })();
   }, []);
@@ -99,16 +107,15 @@ export default () => {
       ),
     );
 
-    
     setLotNumberList(lotNumberDatas.find(a => a.id === projectId) || {});
-    setProductId(projectId)
-    setLotNumberAllDatas(lotNumberDatas.find(a => a.id === projectId))
+    setProductId(projectId);
+    setLotNumberAllDatas(lotNumberDatas.find(a => a.id === projectId));
   };
 
   const searchClick = () => {
-    let filterData = lotNumberAllDatas.data.filter(a => a.title.includes(searchInput))
-    setLotNumberList({...lotNumberAllDatas,data:filterData});
-  }
+    let filterData = lotNumberAllDatas.data.filter(a => a.title.includes(searchInput));
+    setLotNumberList({ ...lotNumberAllDatas, data: filterData });
+  };
 
   const ProductBox = props => {
     return (
@@ -182,11 +189,16 @@ export default () => {
                         placeholder="请输入搜索内容"
                         aria-label="请输入搜索内容"
                         aria-describedby="basic-addon2"
-                        onChange={(e)=> searchInput = e.target.value}
+                        onChange={e => (searchInput = e.target.value)}
                       />
                       <InputGroup.Append>
-                        <Button className={styles.searchBtn} onClick={(e)=>{searchClick(e)}}>
-                          <Search style={{ marginRight: 5, verticalAlign: -2 }}/>
+                        <Button
+                          className={styles.searchBtn}
+                          onClick={e => {
+                            searchClick(e);
+                          }}
+                        >
+                          <Search style={{ marginRight: 5, verticalAlign: -2 }} />
                           搜索
                         </Button>
                       </InputGroup.Append>
@@ -199,18 +211,20 @@ export default () => {
               <Row>
                 <Col sm={12}>
                   {show ? (
-                    <ul className={styles.inspectionList}>
-                      {lotNumberList.data &&
-                        lotNumberList.data.map(a => (
-                          <li
-                            className={styles.lotNumberItem}
-                            key={a.id}
-                            onClick={() => content(a.id)}
-                          >
-                            {a.title}
-                          </li>
-                        ))}
-                    </ul>
+                    <div>
+                      <ul className={styles.inspectionList}>
+                        {lotNumberList.data &&
+                          lotNumberList.data.map(a => (
+                            <li
+                              className={styles.lotNumberItem}
+                              key={a.id}
+                              onClick={() => content(a.id)}
+                            >
+                              {a.title}
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
                   ) : (
                     <div>
                       {Object.keys(inspectionImage).length ? (
@@ -219,7 +233,9 @@ export default () => {
                             {inspectionImage.data.attributes.title}
                           </h1>
                           <p className={styles.dateInspection}>
-                            {dayjs(inspectionImage.data.attributes.created).format('YYYY-MM-DD HH:mm:ss')}
+                            {dayjs(inspectionImage.data.attributes.created).format(
+                              'YYYY-MM-DD HH:mm:ss',
+                            )}
                           </p>
                           <Carousel className={styles.carouselInspection}>
                             {inspectionImage.included.map(a => (

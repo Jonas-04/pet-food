@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import router from 'umi/router';
 import { getNewsList } from '../../services/news';
 import dayjs from 'dayjs';
-import { imageBaseUrl } from '@/config/config'
+import { imageBaseUrl } from '@/config/config';
 
 const NewsItem = props => {
   const detail = id => router.push(`/news/${id}`);
@@ -19,10 +19,7 @@ const NewsItem = props => {
       <Row>
         <Col sm={4}>
           <div className={styles.newImg}>
-            <img
-              src={`${imageBaseUrl}${props.data.imgUrl}`}
-              alt=""
-            />
+            <img src={`${imageBaseUrl}${props.data.imgUrl}`} alt="" />
           </div>
         </Col>
         <Col sm={8}>
@@ -48,7 +45,15 @@ export default () => {
         date: a.attributes.created,
         imgUrl: json.included[index] ? json.included[index].attributes.uri.url : '',
       }));
-      setNewsList(newsList);
+
+      let aaa = newsList.sort(function(a, b) {
+        return (
+          Date.parse(dayjs(b.date).format('YYYY-MM-DD')) -
+          Date.parse(dayjs(a.date).format('YYYY-MM-DD'))
+        );
+      });
+
+      setNewsList(aaa);
     })();
   }, []);
 
