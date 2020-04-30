@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 export default () => (
   <div>
     <div className="common-banner"></div>
-    <div className={styles.content}></div>
     <Container>
       <Row>
         <Col sm={12}>

@@ -46,12 +46,12 @@
 
 .afterLine {
   content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 2rem;
-    height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 2rem;
+  height: 2px;
 }
 
 .feature1 {
@@ -59,12 +59,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
 
   p {
-    width: 50%;
+    width: 60%;
     text-align: center;
     position: relative;
     padding: 1rem 0;
+    color: #221815;
+    font-size: 1.25rem;
 
     &:after:extend(.afterLine) {
       bottom: 0;
@@ -76,14 +83,12 @@
 .featureTitle {
   text-align: center;
   padding: 0 20% 0 20%;
-  margin: 5rem 0 3rem 0;
-  /* 30/16 */
-  ;
+  margin: 3rem 0;
   border-radius: 1rem;
   border: 1px solid #f36609;
 
   h2 {
-    font-size: 1.875rem
+    font-size: 2.25rem
       /* 30/16 */
     ;
     font-weight: bold;
@@ -207,15 +212,30 @@
   }
 }
 
-.feature3Content:extend(.textNoBorder){
+.feature3Content:extend(.textNoBorder) {
   text-align: center;
   font-size: 1.35rem;
 }
 
 .history {
   margin-bottom: 3rem;
+
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+.continued {
+  text-align: center;
+  margin: 0 0 5rem 0;
+  h2 {
+    font-size: 1rem;
+    color: #999;
+  }
+
+  p {
+    color: #221815;
+    margin: 0;
   }
 }

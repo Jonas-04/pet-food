@@ -19,17 +19,20 @@
   // font-family: 'SourceHanSansCN-Blod';
   font-size: 2.25rem;
   color: #f36609;
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
   line-height: 1;
   text-align: center;
+  margin: 2rem 0;
+}
+
+.subTitle:extend(.title) {
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .text {
   color: #221815;
   font-size: 1.25rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 5rem;
   font-weight: 100;
   height: 100%;
   border-bottom: 1px solid #f36609;
@@ -42,8 +45,9 @@
 
 .textNoBorder:extend(.text) {
   border-bottom: none;
+  margin-bottom: 2rem;
   // text-align: center;
-  
+
   img {
     width: 100%;
   }
@@ -64,7 +68,7 @@
 .featureTitle {
   text-align: center;
   padding: 0;
-  margin: 5rem 0 3rem 0;
+  margin: 4rem 0;
   /* 30/16 */
   ;
 
@@ -77,26 +81,32 @@
     background-color: #f36609;
     padding: 1rem 0;
     border-radius: 1rem;
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
 .featureTitleNoColor:extend(.featureTitle) {
-  margin: 3rem 0;
+  margin: 0 0 5rem 0;
 
   h2 {
     font-size: 1.875rem
       /* 30/16 */
     ;
-    font-weight: bold;
+    // font-weight: bold;
     color: #f36609;
     background-color: #fff;
-    padding: 1rem 0;
+    padding: .5rem 0;
     border-radius: 0;
     border: 1px solid #f36609;
   }
 
   p {
-    margin: 2rem;
+    text-align: left;
+    color: #221815;
+    font-size: 1.25rem;
+    font-weight: 100;
+    margin-top: 1rem;
   }
 }
 
@@ -105,4 +115,56 @@
   text-align: center;
   height: auto;
   margin: 0 2rem 2rem 2rem;
+}
+
+.aboutSupplyImg {
+  margin-bottom: 2rem;
+}
+
+.aboutQuality1,
+.aboutQuality2,
+.aboutQuality3 {
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  background-color: #eee;
+  padding: 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    color: #221815;
+    font-size: 1.25rem;
+    font-weight: 100;
+    margin-top: 2rem;
+    text-align: left;
+  }
+}
+
+.aboutQuality1 {
+  margin-right: 2rem;
+}
+
+.aboutQuality2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.aboutQuality3 {
+  margin-left: 2rem;
+}
+
+.aboutQualityText {
+  font-size: 1.25rem
+    /* 30/16 */
+  ;
+  color: #f36609;
+  background-color: #fff;
+  padding: .5rem 0;
+  border-radius: 999em;
+  border: 1px solid #f36609;
+  text-align: center;
+  margin: 0 0 3rem 0;
 }

@@ -2,13 +2,16 @@
 import styles from './style.less';
 import { Container, Row, Col } from 'react-bootstrap';
 import Permits from '../../../assets/permits.png';
-import Supply from '../../../assets/supply.png';
-import Quality from '../../../assets/quality.png';
+import Supply1 from '../../../assets/supply1.png';
+import Supply2 from '../../../assets/supply2.png';
+import Supply3 from '../../../assets/supply3.png';
+import Quality1 from '../../../assets/quality1.png';
+import Quality2 from '../../../assets/quality2.png';
+import Quality3 from '../../../assets/quality3.png';
 
 export default () => (
   <div>
     <div className="common-banner"></div>
-    <div className={styles.content}></div>
     <Container>
       <Row>
         <Col sm={12}>
@@ -34,22 +37,13 @@ export default () => (
 
       <Row>
         <Col sm={12}>
-          <div className={styles.textNoBorder}>
-            <p>
-              go-Charr(高雀)宠粮的生产商是加拿大宠粮生产商SPECTRUM FEED SERVICES
-              LTD公司，该公司在中国海关总署批准的境外宠物食品注册生产加工企业名单之中。
-            </p>
-            <p>
-              go-Charr(高雀)是SPECTRUM工厂的自有品牌，在加拿大本地，go-Charr(高雀)的品牌商标由工厂注册，随后才在国内注册了中文商标。
-            </p>
-            <img src={Permits} alt="Permits" />
-          </div>
+          <img src={Permits} alt=""/>
         </Col>
       </Row>
 
       <Row>
         <Col sm={12}>
-          <div className={styles.title}>
+          <div className={styles.subTitle}>
             go-Charr（高雀）已经获得了农业部颁发的6张进口宠物食品登记证
           </div>
         </Col>
@@ -80,8 +74,20 @@ export default () => (
               宠粮的生产商不仅获得了中国海关总署批准，多年来也是一直从事宠物食品生产，再加上，中加两国关系友好，物流畅通，供货上
               相对来说比较稳定，不会出现突然断货的情况。
             </p>
-            <img src={Supply} alt="supply" />
           </div>
+        </Col>
+        <Col sm={12}>
+          <Row>
+            <Col sm={4}>
+              <img className={styles.aboutSupplyImg} src={Supply1} alt="" />
+            </Col>
+            <Col sm={4}>
+              <img className={styles.aboutSupplyImg} src={Supply2} alt="" />
+            </Col>
+            <Col sm={4}>
+              <img className={styles.aboutSupplyImg} src={Supply3} alt="" />
+            </Col>
+          </Row>
         </Col>
       </Row>
 
@@ -101,8 +107,70 @@ export default () => (
               industry显示Spectrum 是全球第六大宠粮生产商。
             </p>
             <p>这意味着我们的产品质量是可靠的、工艺是成熟的、技术是领先的、管理是科学的。</p>
-            <img src={Quality} alt="quality" />
           </div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col sm={12}>
+          <div className={styles.subTitle}>全球前六大宠粮生产商</div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>玛氏</div>
+        </Col>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>雀巢</div>
+        </Col>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>大宠心</div>
+        </Col>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>希尔斯</div>
+        </Col>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>蓝爵</div>
+        </Col>
+        <Col sm={2}>
+          <div className={styles.aboutQualityText}>Spectrum</div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col sm={12}>
+          <Row>
+            <Col sm={4}>
+              <div className={styles.aboutQuality1}>
+                <img src={Quality1} alt="" />
+                <p>
+                  工厂为保证产品新鲜不流失营养， 将原料采集地放在工厂一百公里
+                  范围内，有订单才采购原料，有 原料立即加工，灌装后立即发货。
+                  避免使用添加剂，保证产品新鲜 有营养。
+                </p>
+              </div>
+            </Col>
+            <Col sm={4}>
+              <div className={styles.aboutQuality2}>
+                <img src={Quality2} alt="" />
+                <p>
+                  产品配方符合AAFCO（美工饲料 控制官员协会）增长、维护、繁
+                  殖的营养需求，这也超过了NRC （加拿大计量局）对狗和猫的营养
+                  需求，符合且多数超过加拿大国 内及北美相关的标准。
+                </p>
+              </div>
+            </Col>
+            <Col sm={4}>
+              <div className={styles.aboutQuality3}>
+                <img src={Quality3} alt="" />
+                <p>
+                  另外，区别于全球其他大牌企业 一律美式生产线，我们的工厂生
+                  产线自主程度在92%以上，工厂 拥有雄厚的技术能力和生产水平。
+                </p>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
 
@@ -126,6 +194,7 @@ export default () => (
             </p>
           </div>
         </Col>
+        
         <Col sm={6}>
           <div className={styles.featureTitleNoColor}>
             <h2>价格亲民</h2>
