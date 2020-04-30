@@ -163,7 +163,7 @@ export default () => (
       </Row>
       <Row>
         <Col sm={12}>
-          <div className={styles.feature3Content}>
+          <div className={styles.feature4Content}>
             <p>所有系列宠粮内采用的凝结剂不是矿物油，而是价格相对较高d额卵磷脂。</p>
           </div>
         </Col>
